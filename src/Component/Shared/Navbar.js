@@ -31,7 +31,7 @@ const Navbar = () => {
     <>
       <nav className="p-4 flex justify-between shadow-lg ">
         <div>
-          <p className="text-xl font-sportingG text-[#6765F0] cursor-pointer">
+          <p className=" ml-4 text-2xl font-sportingG text-[#6765F0] cursor-pointer">
             <span className="   text-rose-700 font-bold">Maje</span>
             Tv
           </p>
@@ -109,12 +109,14 @@ const Navbar = () => {
             <a href="#">About us</a>
           </li>
           <li className="mt-7">
-            <a
-              className="text-white bg-[#264373] py-[13px] px-8 rounded-xl hover:bg-black focus:outline-none focus:ring focus:ring-violet-300"
-              href="#"
-            >
-              Login
-            </a>
+            <li className="mr-10">
+              <a
+                className="text-white bg-[#264373] py-[8px] px-6 rounded-xl hover:bg-black focus:outline-none focus:ring focus:ring-violet-300"
+                href="#"
+              >
+                Login
+              </a>
+            </li>
           </li>
         </ul>
       </Transition>
