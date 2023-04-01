@@ -10,7 +10,7 @@ const Home = () => {
       .catch((error) => console.error(error));
   }, []);
   if (!tvData) return <div>Loading...</div>;
-  console.log(tvData);
+
   return (
     <div className="w-11/12 mx-auto my-3">
       <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

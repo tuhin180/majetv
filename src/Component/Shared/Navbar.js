@@ -6,7 +6,7 @@ const Navbar = () => {
   const menuItems = (
     <React.Fragment>
       <li className="mr-10">
-        <a href="#">Home</a>
+        <a href="/">Home</a>
       </li>
       <li className="mr-10">
         <a href="#">Program</a>
