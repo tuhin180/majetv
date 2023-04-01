@@ -9,14 +9,25 @@ const Home = () => {
       .then((response) => setTvData(response.data))
       .catch((error) => console.error(error));
   }, []);
-  if (!tvData) return <div>Loading...</div>;
+  if (!tvData)
+    return (
+      <div className="flex justify-center items-center text-xl mt-2">
+        Loading <span className="animate-pulse">...</span>
+      </div>
+    );
 
   return (
     <div className="w-11/12 mx-auto my-3">
       <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {tvData.map((cardData, index) => (
-          <Card key={index} cardData={cardData} />
-        ))}
+        {tvData
+          .filter(
+            (cardData) =>
+              cardData.show.image &&
+              (cardData.show.image.medium || cardData.show.image.regular)
+          )
+          .map((cardData, index) => (
+            <Card key={index} cardData={cardData} />
+          ))}
       </div>
     </div>
   );
